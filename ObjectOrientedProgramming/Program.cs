@@ -1,17 +1,34 @@
-﻿using ObjectOrientedProgramming;
+﻿using System;
+using ObjectOrientedPrograms;
 
-List<Stock> stocks = new List<Stock>()
+namespace ObjectOrientedPrograms
 {
-    new Stock()
+    public class Program
     {
-        Price = 20, Name = "Gold", nostocks  = 6, Symbol = "Gold.Pic"
+        static void Main(string[] agrs)
+        {
+            List<Stock> stocks = new List<Stock>()
+            {
+               new Stock()
+               {
+                  Price = 10, Name = "Bajaj", nostocks  = 5, Symbol = "Bajaj.Pic"
+               },
 
-    },
-    new Stock()
-    {
-        Name = "Sliver", Price = 40, Symbol = "Sliver.coc", nostocks = 7
+               new Stock()
+               {
+                   Name = "Flipkart", Price = 20, Symbol = "Flipkart.coc", nostocks = 10
+               },
+
+            };
+
+
+            StockManagement stockManagement = new StockManagement(stocks);
+
+            stockManagement.CalutateTotalValue();
+            
+            
+        }
+
+
     }
-};
-
-StockManagement stockMangement = new StockManagement();
-stockMangement.CalutateTotalValue(stocks);
+}

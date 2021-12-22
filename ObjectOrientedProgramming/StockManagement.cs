@@ -4,13 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ObjectOrientedProgramming
+namespace ObjectOrientedPrograms
 {
     public class StockManagement
     {
-        public void CalutateTotalValue(List<Stock> stocks1)
+
+        List<Stock> stocklist = new List<Stock>();
+        public StockManagement(List<Stock> stocks)
         {
-            foreach (Stock stock in stocks1)
+            stocklist = stocks;
+        }
+
+        public void CalutateTotalValue()
+        {
+            foreach (Stock stock in stocklist)
             {
                 stock.TotalPrice = stock.Price * stock.nostocks;
                 Console.WriteLine($"{stock.Name} Has Total Price Of {stock.TotalPrice}");
@@ -21,3 +28,4 @@ namespace ObjectOrientedProgramming
     }
 }
 
+        

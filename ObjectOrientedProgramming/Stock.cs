@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ObjectOrientedProgramming
+namespace ObjectOrientedPrograms
 {
     public class Stock
     {
@@ -14,8 +14,5 @@ namespace ObjectOrientedProgramming
         public string Name { get; set; }
         public string Symbol { get; set; }
 
-
     }
-
 }
-
